@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>보안증명서 사용법</title>
+	<style>
+		*{ margin: 0px; padding: 0px; font-family: 'Nanum Gothic', monospace; font-size: 14px; color: #333333;  text-decoration:none; list-style: none;}
+		img{display:block;}
+		div.wrap{width:770px; margin:0 auto; box-shadow:0px 2px 2px 2px #cccccc; position: relative;}
+		span{font-weight:bold;}
+		.step{width:665px;  margin-left:43px; margin-top:10px; text-align: left;line-height:26px; box-sizing: border-box; position: relative;}
+		.button{
+			border-radius:12px;
+            
+            position:absolute; 
+			padding-top:10px;
+			box-sizing: border-box; 
+			background-color:#008ce7; 
+			text-align: center; 
+			width:110px; 
+			height:60px; 
+			top:16px; 
+			left:540px; 
+			color:#fff;
+            line-height:20px;
+			font-size:14px;
+            
+		}
+        .button:hover{background-color:#208ad0; top:18px;}     
+		
+		.btn{  font-weight:bold;}
+        .step1_img{ width:665px; height:240px; margin-top:10px; margin-left:43px; }
+		.step2_img{ width:665px; height:240px; margin-left:43px; }
+		.step3_img{ width:665px; height:240px; margin-left:43px; }
+		.footer{width:770px; margin-top:25px;}
+            
+        
+        .lag{position: absolute; top:15px; left:635px; }
+        select{width:125px; height:24px; font-size:12px; font-weight:bold; letter-spacing: 2px; border:0; color: #008ce7; background-color: #fff; border:2px solid #008ce7;} 
+        
+        
+	</style>
+	<script type="text/javascript">
+		
+		function exedown(){
+			var os = navigator.platform;
+			if(os.substring(0,3) == "Mac"){
+				alert("MAC OS 환경에서는 보안증명서 전용뷰어가 설치되지 않습니다.\nWindows 환경을 이용해주시기 바랍니다.");
+			}else{
+				location.href="http://uni.webminwon.com/wm1.0/activex/ICT_DOCULINKREADER_SETUP.exe";	
+				hitory.back();
+			}
+
+//			http://uni.webminwon.com/wm1.0/activex/ICT_DOCULINKREADER_SETUP.exe
+			//location.href="http://uni.webminwon.com/wm1.0/activex/ICT_DOCULINKREADER_SETUP.exe";
+			//hitory.back();
+		}
+
+		function selLan(s){
+			var element = document.getElementById('LANG');
+			element.value = 'XX';
+			if(s == "KO"){
+				document.getElementById('KO').style.display = 'block';
+				document.getElementById('EN').style.display = 'none';
+				document.getElementById('CN').style.display = 'none';
+				document.getElementById('JP').style.display = 'none';
+
+			}else if(s == "EN"){
+				document.getElementById('KO').style.display = 'none';
+				document.getElementById('EN').style.display = 'block';
+				document.getElementById('CN').style.display = 'none';
+				document.getElementById('JP').style.display = 'none';
+
+			}else if(s == "CN"){
+				document.getElementById('KO').style.display = 'none';
+				document.getElementById('EN').style.display = 'none';
+				document.getElementById('CN').style.display = 'block';
+				document.getElementById('JP').style.display = 'none';
+
+			}else if(s == "JP"){
+				document.getElementById('KO').style.display = 'none';
+				document.getElementById('EN').style.display = 'none';
+				document.getElementById('CN').style.display = 'none';
+				document.getElementById('JP').style.display = 'block';
+
+			}else{
+				document.getElementById('KO').style.display = 'block';
+				document.getElementById('EN').style.display = 'none';
+				document.getElementById('CN').style.display = 'none';
+				document.getElementById('JP').style.display = 'none';
+
+			}
+		}
+	</script>
+</head>
+
+<body>
+<div class="wrap" id="KO" style="display:block;">
+	<div class="title">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/top_1.gif" />
+	</div>
+	<div class="lag">
+		<select name="selLan" onchange="selLan(this.value);" id="LANG">
+			<option value="XX" selected="selected">LANGUAGE</option>
+			<option value="KR">한국어</option>
+			<option value="EN">English</option>
+			<option value="CN">中國語</option>
+			<option value="JP">日本語</option>
+		</select>
+	</div>
+	<div class="step">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/f.gif" />
+		<a href="javascript:exedown();" class="btn">
+			<div class="button">설치파일<br>다운로드</div>
+		</a>
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/s1.gif" style="padding-top: 10px;" />
+	</div>
+       
+	<div class="step2">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/title2.gif" />
+	</div>
+       
+	<div class="step2_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/s2.gif" />
+	</div>
+       
+	<div class="step3">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/title3.gif" />     
+	</div> 
+       
+	<div class="step3_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/s3.gif" />
+	</div> 
+      
+	<div class="footer">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ko_KR/download/bottom.gif" />
+	</div> 
+</div>
+
+<div class="wrap" id="EN" style="display:none;">
+	<div class="title">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/top_1.gif" />
+	</div>
+	<div class="lag">
+		<select name="selLan" onchange="selLan(this.value);">
+			<option value="XX" selected="selected">LANGUAGE</option>
+			<option value="KR">한국어</option>
+			<option value="EN">English</option>
+			<option value="CN">中國語</option>
+			<option value="JP">日本語</option>
+		</select>
+	</div>
+	<div class="step">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/f.gif" />
+		<a href="javascript:exedown();" class="btn">
+			<div class="button">File<br>Download</div>
+		</a>
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/s1.gif" style="padding-top: 10px;" />
+	</div>
+       
+	<div class="step2">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/title2.gif" />
+	</div>
+       
+	<div class="step2_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/s2.gif" />
+	</div>
+       
+	<div class="step3">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/title3.gif" />     
+	</div> 
+       
+	<div class="step3_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/s3.gif" />
+	</div> 
+      
+	<div class="footer">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/en/download/bottom.gif" />
+	</div> 
+</div>
+
+
+<div class="wrap" id="CN" style="display:none;">
+	<div class="title">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/top_1.gif" />
+	</div>
+	<div class="lag">
+		<select name="selLan" onchange="selLan(this.value);">
+			<option value="XX" selected="selected">LANGUAGE</option>
+			<option value="KR">한국어</option>
+			<option value="EN">English</option>
+			<option value="CN">中國語</option>
+			<option value="JP">日本語</option>
+		</select>
+	</div>
+	<div class="step">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/f.gif" />
+		<a href="javascript:exedown();" class="btn">
+			<div class="button">安裝文件<br />下載</div>
+		</a>
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/s1.gif" style="padding-top: 10px;" />
+	</div>
+       
+	<div class="step2">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/title2.gif" />
+	</div>
+       
+	<div class="step2_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/s2.gif" />
+	</div>
+       
+	<div class="step3">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/title3.gif" />     
+	</div> 
+       
+	<div class="step3_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/s3.gif" />
+	</div> 
+      
+	<div class="footer">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/zh_CN/download/bottom.gif" />
+	</div> 
+</div>
+
+
+<div class="wrap" id="JP" style="display:none;">
+	<div class="title">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/top_1.gif" />
+	</div>
+	<div class="lag">
+		<select name="selLan" onchange="selLan(this.value);">
+			<option value="XX" selected="selected">LANGUAGE</option>
+			<option value="KR">한국어</option>
+			<option value="EN">English</option>
+			<option value="CN">中國語</option>
+			<option value="JP">日本語</option>
+		</select>
+	</div>
+	<div class="step">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/f.gif" />
+		<a href="javascript:exedown();" class="btn">
+			<div class="button">ファイル<br />ダウンロード</div>
+		</a>
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/s1.gif" style="padding-top: 10px;" />
+	</div>
+       
+	<div class="step2">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/title2.gif" />
+	</div>
+       
+	<div class="step2_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/s2.gif" />
+	</div>
+       
+	<div class="step3">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/title3.gif" />     
+	</div> 
+       
+	<div class="step3_img">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/s3.gif" />
+	</div> 
+      
+	<div class="footer">
+		<img src="http://uni.webminwon.com/wm1.0/images/locale/ja_JP/download/bottom.gif" />
+	</div> 
+</div>
+
+</body>
+</html>
